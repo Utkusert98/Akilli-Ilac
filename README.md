@@ -1,48 +1,45 @@
-# Akıllı İlaç Hatırlatıcı 💊
+# Akıllı İlaç Hatırlatıcı • Full-Stack Projesi 💊
 
 Bu proje, hastaların ilaç takip planlarını oluşturmasını, yönetmesini ve arşivlemesini sağlayan tam kapsamlı (full-stack) bir web uygulamasıdır.
 
-Bu portfolyo projesi, modern bir teknoloji yığını (React, Nest.JS, TypeScript, TypeORM) kullanarak sıfırdan tam bir **CRUD (Create, Read, Update, Delete)** uygulamasının nasıl inşa edildiğini sergilemek amacıyla geliştirilmiştir.
-
-
-
+Bu portfolyo projesi, modern ve kurumsal bir teknoloji yığını kullanarak (React, Nest.JS, TypeScript, TypeORM) sıfırdan tam bir **CRUD (Create, Read, Update, Delete)** uygulamasının nasıl inşa edildiğini sergilemek amacıyla geliştirilmiştir.
 
 ---
 
-## 🚀 Proje Demosu
+## 🚀 Proje Demosu ve Ekran Görüntüleri
 
-Bu projenin canlı bir demosu bulunmamaktadır, çünkü `SQLite` veritabanı `Vercel` gibi "sunucusuz" (serverless) platformlarda kalıcı olarak çalışmamaktadır.
-
-Projenin tüm özelliklerinin çalıştığı bir demo videosunu (ekran kaydı) aşağıya ekleyeceğim:
+Aşağıda uygulamanın ana özelliklerini (ilaç ekleme, listeleme ve arşivleme) gösteren ekran görüntüleri yer almaktadır.
 
 ![Akıllı İlaç Hatırlatıcı - Ana Ekran](./img/img-1.png)
 ![Akıllı İlaç Hatırlatıcı - Form Detayları](./img/img-2.png)
+
+*(Bu bölüme projenin çalıştığını gösteren bir ekran kaydı (GIF/MP4) eklemeniz, projenin etkisini daha da artıracaktır.)*
 
 ---
 
 ## 🛠️ Kullanılan Teknolojiler (Tech Stack)
 
-Bu proje, iki ana bölümden oluşmaktadır:
+Bu proje, iki ana modülden oluşan bir **monorepo** yapısındadır:
 
-### Frontend (Müşteri Ofisi - React)
+### Frontend (Müşteri Arayüzü)
 * **React (v18+):** Modern kullanıcı arayüzleri için temel kütüphane.
 * **React Hooks (`useState`, `useEffect`):** Bileşenlerin state (durum) ve yaşam döngüsü yönetimi.
 * **CSS3 (Glassmorphism):** Modern, cam efektli ve duyarlı (responsive) tasarım.
 * **Fetch API (async/await):** Backend ile asenkron iletişim kurmak için.
 
-### Backend (Arşiv Odası - Nest.JS)
+### Backend (Sunucu ve Veri Tabanı)
 * **Nest.JS (TypeScript):** Güçlü, ölçeklenebilir ve kurumsal Node.js framework'ü.
 * **TypeScript:** Koda tip güvenliği (type-safety) ekleyerek hataları en aza indiren dil.
-* **TypeORM:** Veritabanı ile "Arşiv Uzmanı" (`AppService`) arasında köprü kuran modern ORM.
-* **SQLite:** Geliştirme ortamı için hızlı, dosya tabanlı ve kalıcı veritabanı.
+* **TypeORM:** Veritabanı ile "Arşiv Uzmanı" (`AppService`) arasında köprü kuran modern ORM (Object-Relational Mapper).
+* **SQLite:** Geliştirme ortamı için hızlı, dosya tabanlı ve **kalıcı** veritabanı.
 
 ---
 
 ## ✨ Temel Özellikler
 
-* **Tam CRUD Fonksiyonelliği:** İlaçlar için Ekleme (Create), Okuma (Read), Güncelleme (Update) ve Silme (Delete) işlemleri.
-* **Kapsamlı İlaç Formu:** İlaç adı, dozaj, ilaç formu (tablet, şurup vb.), kullanım şekli (aç/tok), alınacak günler (Pzt, Sa...) ve ek notlar.
-* **Durum Yönetimi (Update):** İlaçları "Arşivleme" (`aktif: false`) ve "Aktif Etme" (`aktif: true`) özellikleri.
+* **Tam CRUD Fonksiyonelliği:** İlaçlar için kalıcı Ekleme (Create), Okuma (Read), Güncelleme (Update) ve Silme (Delete) işlemleri.
+* **Zenginleştirilmiş İlaç Formu:** İlaç adı, dozaj, ilaç formu (tablet, şurup vb.), kullanım şekli (aç/tok), alınacak günler (Pzt, Sa...) ve ek notlar.
+* **Kalıcı Durum Yönetimi:** İlaçları "Arşivleme" (`aktif: false`) ve "Aktif Etme" (`aktif: true`) özellikleri.
 * **Kalıcı Veritabanı:** `Nest.JS` sunucusu yeniden başlasa bile, `TypeORM` ve `SQLite` sayesinde veriler kaybolmaz.
 * **Full-Stack Entegrasyonu:** React (Frontend) ile Nest.JS (Backend) arasında `CORS` ayarları yapılmış, tam entegre bir API iletişimi.
 
